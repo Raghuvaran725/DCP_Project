@@ -32,6 +32,7 @@ public class PostDTO{
 				post.getListOfComment().stream().map(CommentDTO::toDTO).collect(Collectors.toList()),
 				post.getNoOfViews(),
 				post.getVote().stream().map(VoteDTO::toDTO).collect(Collectors.toList())
+				
 		);
 	}
 

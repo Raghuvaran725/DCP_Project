@@ -1,5 +1,6 @@
 package com.devcommunity.app.controller;
 
+import com.devcommunity.app.DevCommunityApplication;
 import com.devcommunity.app.dto.DeveloperDTO;
 import com.devcommunity.app.dto.LoginRequestDTO;
 import com.devcommunity.app.dto.LoginResponseDTO;
@@ -9,6 +10,7 @@ import com.devcommunity.app.service.DeveloperService;
 import com.devcommunity.app.service.UserService;
 import com.devcommunity.app.util.UserRoleEnum;
 import com.google.gson.Gson;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,16 +21,14 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDate;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.*;
+
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@SpringBootTest
+@SpringBootTest(classes=DevCommunityApplication.class)
 @AutoConfigureMockMvc
 class AuthControllerTest {
     @Autowired
@@ -39,6 +39,7 @@ class AuthControllerTest {
     @MockBean
     DeveloperService developerService;
     Gson gson = new Gson();
+
 
     @Test
     void registerUser() throws Exception {

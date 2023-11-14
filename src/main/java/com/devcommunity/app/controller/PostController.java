@@ -1,7 +1,6 @@
 package com.devcommunity.app.controller;
 
 import com.devcommunity.app.dto.AddVoteDTO;
-import com.devcommunity.app.dto.CommentDTO;
 import com.devcommunity.app.dto.PostDTO;
 import com.devcommunity.app.dto.UpdatePostDTO;
 import com.devcommunity.app.entity.Vote;

@@ -1,7 +1,6 @@
 package com.devcommunity.app.service;
 
 import com.devcommunity.app.dto.AddVoteDTO;
-import com.devcommunity.app.dto.CommentDTO;
 import com.devcommunity.app.dto.PostDTO;
 import com.devcommunity.app.dto.UpdatePostDTO;
 import com.devcommunity.app.entity.Comment;
@@ -16,7 +15,6 @@ import com.devcommunity.app.repository.VoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
